@@ -1,0 +1,13 @@
+Fibonacci series upto n terms
+
+   vector<int>ans(n+1);
+       ans[0]=0;
+       ans[1]=1;
+       
+       int mod = 1e9+7;
+       for(int i=2;i<=n;i++){
+           int t= ans[i-1]+ans[i-2];
+           t %=mod;
+           ans[i]=t;
+       }
+       return ans;
